@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: hotpink;
+}
+
+p {
+  color: white;
+}
+
+p {
+  color: red;
+}

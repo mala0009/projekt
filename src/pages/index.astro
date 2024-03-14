@@ -1,5 +1,7 @@
 ---
-
+import "../styles/style.css";
+import Card from "../components/card.astro";
+import Navigation from "../components/header.astro";
 ---
 
 <html lang="en">
@@ -9,8 +11,19 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
+	
 	</head>
 	<body>
+
+		<Navigation />
 		<h1>Astro</h1>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam autem nisi culpa non libero beatae voluptas quod ipsum temporibus quas enim facilis voluptates, dolor tempore ad illo, ducimus eos sunt?</p>
+		<main>
+
+<Card header="Hej" text="lorem ipsum dollar"/>
+<Card header="Hej b" text="lorem ipsum dollar"/>
+<Card header="Hej a" text="lorem ipsum dollar"/>
+
+		</main>
 	</body>
 </html>
