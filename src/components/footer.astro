@@ -8,7 +8,7 @@
     <h2>Newsletter</h2>
     <div>Sign up to the newsletter and be the first to know about music announcement, events and much more.</div>
     <form action="#">
-      <button type="submit">Tilmeld</button>
+      <button type="submit">JOIN</button>
     </form>
   </div>
   <div class="kontakt_info">
@@ -38,13 +38,10 @@
     flex-basis: 100%; /* Placer dem under hinanden */
   }
 
-  .newsletter {
-    text-align: left;
-  }
-
   .kontakt_info {
     text-align: left;
     padding-top: 2rem;
+    font-size: 15px;
   }
 
   .social-icons {
@@ -62,18 +59,23 @@
     margin-bottom: 10px;
   }
   .newsletter button {
-    color: #333;
-    border: none;
+    background-color: transparent; /* Gennemsigtig baggrundsfarve */
+    color: #0f0; /* Grøn tekstfarve */
+    border: 2px solid #0f0; /* Grøn streg */
     padding: 8px 16px;
     border-radius: 4px;
-    margin-left: 10px;
     cursor: pointer;
   }
 
+  .newsletter button:hover {
+    background-color: #0f0; /* Grøn baggrundsfarve ved hover */
+    color: black;
+  }
+
   .social-icons a {
-    color: #fff;
     text-decoration: none;
     margin-right: 10px;
+    color: #0f0;
   }
 
   .social-icons a:hover {
