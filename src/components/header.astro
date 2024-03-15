@@ -3,7 +3,6 @@
 ---
 
 <nav>
-<<<<<<< HEAD
   <div class="logo">
     <img src="/img/logopt2.png" alt="Logo" />
   </div>
@@ -20,318 +19,201 @@
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
-=======
-  <ul class="menu">
-    <li><a href="about.astro">ABOUT</a></li>
-    <li><a href="tickets.astro">TICKETS</a></li>
-    <li><a href="program.astro">PROGRAM</a></li>
-    <li><a href="contact.astro">CONTACT</a></li>
-    <li><a href="volunteer.astro">VOLUNTEER</a></li>
-    <li><a href="galleri.astro">GALLERY</a></li>
-  </ul>
-  <div class="burger">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="logo">
-      <img src="/logopt2.png" alt="Logo" />
-    </div>
-    <div>
       <ul class="menu">
-        <li><a href="/#">About</a></li>
-        <li><a href="/#">Tickets</a></li>
-        <li><a href="/#">Program</a></li>
-        <li><a href="/#">Contact</a></li>
-        <li><a href="/#">Volunteer</a></li>
-        <li><a href="/#">Gallery</a></li>
+        <li><a href="about.astro">ABOUT</a></li>
+        <li><a href="tickets.astro">TICKETS</a></li>
+        <li><a href="program.astro">PROGRAM</a></li>
+        <li><a href="contact.astro">CONTACT</a></li>
+        <li><a href="volunteer.astro">VOLUNTEER</a></li>
+        <li><a href="galleri.astro">GALLERY</a></li>
       </ul>
       <div class="burger">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
+        <div class="logo">
+          <img src="/logopt2.png" alt="Logo" />
+        </div>
+        <div>
+          <ul class="menu">
+            <li><a href="/#">About</a></li>
+            <li><a href="/#">Tickets</a></li>
+            <li><a href="/#">Program</a></li>
+            <li><a href="/#">Contact</a></li>
+            <li><a href="/#">Volunteer</a></li>
+            <li><a href="/#">Gallery</a></li>
+          </ul>
+          <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
       </div>
->>>>>>> Pi-branch
+
+      <style>
+        .menu.active {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          background-color: radial-gradient(circle, #5c1da9, #000000);
+        }
+        nav {
+          display: flex;
+          justify-content: flex-end; /* Skubber indhold til højre */
+          align-items: center; /* Centrerer indholdet vertikalt */
+        }
+        ul {
+          list-style-type: none;
+        }
+        ul a {
+          text-decoration: none;
+          color: black;
+          font-size: 3rem;
+        }
+        header {
+          gap: 10px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 4rem;
+        }
+        header a {
+          text-decoration: none;
+          color: black;
+          padding-right: 20px;
+          font-size: 1rem;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        nav ul {
+          display: flex;
+          margin: 0;
+          list-style: none;
+          justify-content: right;
+          gap: 30px;
+          text-transform: uppercase;
+          font-size: 0.8rem;
+          display: none;
+        }
+
+        .menu a {
+          text-decoration: none;
+          color: #f3eef9;
+          padding-right: 20px;
+          font-size: 1rem;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        /* BURGERMENU */
+
+        .burger {
+          width: 30px;
+          height: 20px;
+          cursor: pointer;
+          margin-right: 2rem;
+        }
+
+        .burger .line {
+          width: 100%;
+          height: 2px;
+          background-color: #f3eef9;
+          margin-bottom: 5px;
+          transition: 0.2s linear;
+        }
+        .burger.active .line:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+          transition: 0.2s linear;
+        }
+
+        .burger.active .line:nth-child(2) {
+          opacity: 0;
+          transition: 0.15s linear;
+        }
+
+        .burger.active .line:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, -5px);
+          transition: 0.2s linear;
+        }
+
+        .back a {
+          font-size: 30px;
+        }
+
+        .logo img {
+          width: 100px;
+          margin: 10px;
+          margin-top: 1rem;
+        }
+
+        .back {
+          width: 3rem;
+          margin: 10px;
+
+          margin-left: 2rem;
+        }
+
+        /* MENU DESK */
+        @media screen and (min-width: 768px) {
+          nav {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+          }
+
+          nav ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+          }
+
+          .logo img {
+            height: 50px;
+          }
+
+          nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+          }
+
+          nav a:hover {
+            text-decoration: underline;
+          }
+          .burger {
+            display: none;
+          }
+        }
+      </style>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const burger = document.querySelector(".burger");
+          const nav = document.querySelector("nav");
+          const menu = document.querySelector(".menu");
+          const links = document.querySelectorAll("nav .menu a");
+
+          burger.addEventListener("click", () => {
+            burger.classList.toggle("active");
+            nav.classList.toggle("active");
+            menu.classList.toggle("active");
+          });
+
+          links.forEach((link) => {
+            link.addEventListener("click", () => {
+              burger.classList.remove("active");
+              nav.classList.remove("active");
+              menu.classList.remove("active");
+            });
+          });
+        });
+      </script>
     </div>
   </div>
-
-<<<<<<< HEAD
-<style>
-  .menu.active {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #5c1da9;
-  }
-  nav {
-    display: flex;
-    justify-content: space-between; /* Skubber indhold til højre */
-    align-items: center; /* Centrerer indholdet vertikalt */
-  }
-  ul {
-    list-style-type: none;
-  }
-  ul a {
-    text-decoration: none;
-    color: black;
-    font-size: 3rem;
-  }
-  header {
-    gap: 10px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 4rem;
-  }
-  header a {
-    text-decoration: none;
-    color: black;
-    padding-right: 20px;
-    font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  nav ul {
-    display: flex;
-    margin: 0;
-    list-style: none;
-    justify-content: right;
-    gap: 30px;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    display: none;
-  }
-
-  .menu a {
-    text-decoration: none;
-    color: #f3eef9;
-    padding-right: 20px;
-    font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  /* BURGERMENU */
-
-  .burger {
-    width: 30px;
-    height: 20px;
-    cursor: pointer;
-    margin-right: 2rem;
-  }
-
-  .burger .line {
-    width: 100%;
-    height: 2px;
-    background-color: #f3eef9;
-    margin-bottom: 5px;
-    transition: 0.2s linear;
-  }
-  .burger.active .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-    transition: 0.2s linear;
-  }
-
-  .burger.active .line:nth-child(2) {
-    opacity: 0;
-    transition: 0.15s linear;
-  }
-
-  .burger.active .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-    transition: 0.2s linear;
-  }
-
-  .back a {
-    font-size: 30px;
-  }
-
-  .logo img {
-    width: 100px;
-    margin: 10px;
-    margin-top: 1rem;
-    display: block;
-  }
-
-  .back {
-    width: 3rem;
-    margin: 10px;
-
-    margin-left: 2rem;
-  }
-
-  /* MENU DESK */
-  @media screen and (min-width: 768px) {
-    nav {
-      display: flex;
-      gap: 1rem;
-      justify-content: space-between;
-=======
-  <style>
-    .menu.active {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background-color: radial-gradient(circle, #5c1da9, #000000);
-    }
-    nav {
-      display: flex;
-      justify-content: flex-end; /* Skubber indhold til højre */
-      align-items: center; /* Centrerer indholdet vertikalt */
->>>>>>> Pi-branch
-    }
-    ul {
-      list-style-type: none;
-    }
-    ul a {
-      text-decoration: none;
-      color: black;
-      font-size: 3rem;
-    }
-    header {
-      gap: 10px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 4rem;
-    }
-    header a {
-      text-decoration: none;
-      color: black;
-      padding-right: 20px;
-      font-size: 1rem;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    nav ul {
-      display: flex;
-      margin: 0;
-      list-style: none;
-      justify-content: right;
-      gap: 30px;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      display: none;
-    }
-
-    .menu a {
-      text-decoration: none;
-      color: #f3eef9;
-      padding-right: 20px;
-      font-size: 1rem;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    /* BURGERMENU */
-
-    .burger {
-      width: 30px;
-      height: 20px;
-      cursor: pointer;
-      margin-right: 2rem;
-    }
-
-    .burger .line {
-      width: 100%;
-      height: 2px;
-      background-color: #f3eef9;
-      margin-bottom: 5px;
-      transition: 0.2s linear;
-    }
-    .burger.active .line:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-      transition: 0.2s linear;
-    }
-
-    .burger.active .line:nth-child(2) {
-      opacity: 0;
-      transition: 0.15s linear;
-    }
-
-    .burger.active .line:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-      transition: 0.2s linear;
-    }
-
-    .back a {
-      font-size: 30px;
-    }
-
-    .logo img {
-      width: 100px;
-      margin: 10px;
-      margin-top: 1rem;
-    }
-
-    .back {
-      width: 3rem;
-      margin: 10px;
-
-      margin-left: 2rem;
-    }
-
-    /* MENU DESK */
-    @media screen and (min-width: 768px) {
-      nav {
-        display: flex;
-        gap: 1rem;
-        justify-content: flex-end;
-      }
-
-      nav ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        color: #fff;
-      }
-
-      .logo img {
-        height: 50px;
-      }
-
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        margin-left: 20px;
-      }
-
-      nav a:hover {
-        text-decoration: underline;
-      }
-      .burger {
-        display: none;
-      }
-    }
-  </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const burger = document.querySelector(".burger");
-      const nav = document.querySelector("nav");
-      const menu = document.querySelector(".menu");
-      const links = document.querySelectorAll("nav .menu a");
-
-      burger.addEventListener("click", () => {
-        burger.classList.toggle("active");
-        nav.classList.toggle("active");
-        menu.classList.toggle("active");
-      });
-
-      links.forEach((link) => {
-        link.addEventListener("click", () => {
-          burger.classList.remove("active");
-          nav.classList.remove("active");
-          menu.classList.remove("active");
-        });
-      });
-    });
-  </script>
 </nav>
