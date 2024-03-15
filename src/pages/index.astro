@@ -1,44 +1,28 @@
 ---
 import "../styles/style.css";
-<<<<<<< HEAD
 import card from "../components/card.astro";
 import header from "../components/header.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	
-	</head>
-	<body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <header></header>
 
-		<header/>
-	
-		<main>
-
-<Layout>
-  <div class="hero">
-    <h1>KARRUSEL FESTIVAL</h1>
-    <p>22-24 AUGUST</p>
-    <p>REFSHALEØEN</p>
-  </div>
-</Layout>
-		</main>
-	</body>
+    <main>
+      <Layout>
+        <div class="hero">
+          <h1>KARRUSEL FESTIVAL</h1>
+          <p>22-24 AUGUST</p>
+          <p>REFSHALEØEN</p>
+        </div>
+      </Layout>
+    </main>
+  </body>
 </html>
-=======
-import header from "../components/header.astro";
-import footer from "../components/footer.astro";
-import Layout from "../Layout.astro";
----
-
-<Layout>
-  <h1>Karrusel festival</h1>
-  <div>Refshaleøen</div>
-  <div>August 22–24, 2024</div>
-</Layout>
->>>>>>> master
