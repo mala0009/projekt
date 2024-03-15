@@ -1,7 +1,7 @@
 ---
 import "../styles/style.css";
-import Card from "../components/card.astro";
-import Navigation from "../components/header.astro";
+import card from "../components/card.astro";
+import header from "../components/header.astro";
 ---
 
 <html lang="en">
@@ -15,15 +15,17 @@ import Navigation from "../components/header.astro";
 	</head>
 	<body>
 
-		<Navigation />
-		<h1>Astro</h1>
-		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam autem nisi culpa non libero beatae voluptas quod ipsum temporibus quas enim facilis voluptates, dolor tempore ad illo, ducimus eos sunt?</p>
+		<header/>
+	
 		<main>
 
-<Card header="Hej" text="lorem ipsum dollar"/>
-<Card header="Hej b" text="lorem ipsum dollar"/>
-<Card header="Hej a" text="lorem ipsum dollar"/>
-
+<Layout>
+  <div class="hero">
+    <h1>KARRUSEL FESTIVAL</h1>
+    <p>22-24 AUGUST</p>
+    <p>REFSHALEØEN</p>
+  </div>
+</Layout>
 		</main>
 	</body>
 </html>
