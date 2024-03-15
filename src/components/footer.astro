@@ -1,3 +1,84 @@
 ---
 
 ---
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<footer>
+  <div class="newsletter">
+    <h2>Newsletter</h2>
+    <div>Sign up to the newsletter and be the first to know about music announcement, events and much more.</div>
+    <form action="#">
+      <button type="submit">JOIN</button>
+    </form>
+  </div>
+  <div class="kontakt_info">
+    <div>Contact: info@nusnus.dk</div>
+    <div>Karrusel, Copenhagen, Refshaleøen</div>
+  </div>
+  <div class="social-icons">
+    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-spotify"></i></a>
+  </div>
+</footer>
+
+<style>
+  footer {
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Tillad linjebrydning */
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .newsletter,
+  .kontakt_info,
+  .social-icons {
+    flex-basis: 100%; /* Placer dem under hinanden */
+  }
+
+  .kontakt_info {
+    text-align: left;
+    padding-top: 2rem;
+    font-size: 15px;
+  }
+
+  .social-icons {
+    text-align: right;
+  }
+
+  .newsletter h2,
+  .kontakt_info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .newsletter div,
+  .kontakt_info div {
+    margin-bottom: 10px;
+  }
+  .newsletter button {
+    background-color: transparent; /* Gennemsigtig baggrundsfarve */
+    color: #0f0; /* Grøn tekstfarve */
+    border: 2px solid #0f0; /* Grøn streg */
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .newsletter button:hover {
+    background-color: #0f0; /* Grøn baggrundsfarve ved hover */
+    color: black;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    margin-right: 10px;
+    color: #0f0;
+  }
+
+  .social-icons a:hover {
+    text-decoration: underline;
+  }
+</style>
