@@ -3,7 +3,7 @@
 }
 
 body {
-  background: #9E50FF
+  background: radial-gradient(circle, #5C1DA9, #000000);
 }
 
 p {
