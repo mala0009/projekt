@@ -9,12 +9,10 @@ body {
 
 
 
-p {
-  color: white;
-}
+
 
 p {
-  color: white;
+  color:white
   font-family: Arial, Helvetica, sans-serif;
   
 }
@@ -29,5 +27,7 @@ h1{
 
 .forside_tekst1,.forside_tekst2 {
   color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.5cap;
 }
 
