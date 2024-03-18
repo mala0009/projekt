@@ -2,16 +2,27 @@
 import "../styles/style.css";
 import header from "../components/header.astro";
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/artist_card.astro";
 ---
 
-<Layout>
-  <div class="hero">
-    <h1>Karrusel festival</h1>
-    <div class="forside_tekst1">Refshaleøen</div>
-    <div class="forside_tekst2">August 22–24, 2024</div>
-  </div>
-</Layout>
-
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <main>
+      <div class="hero">
+        <h1>Karrusel festival</h1>
+        <div class="forside_tekst1">Refshaleøen</div>
+        <div class="forside_tekst2">August 22–24, 2024</div>
+      </div>
+    </main>
+  </body>
+</html>
 <style>
   .h2forside {
     color: white;
