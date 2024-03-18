@@ -4,16 +4,25 @@
 
 body {
   background: radial-gradient(circle, #5C1DA9, #000000);
+
 }
+
+
 
 p {
   color: white;
 }
 
 p {
-  color: red;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  
 }
 
+h1 {
+  color: white;
+  font-family: overwave;
+}
 h1{
   color: white;
 }
