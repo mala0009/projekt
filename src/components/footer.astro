@@ -7,15 +7,16 @@
   <div class="newsletter">
     <h2>Newsletter</h2>
     <div>Sign up to the newsletter and be the first to know about music announcement, events and much more.</div>
-    <form action="#">
-      <button type="submit">JOIN</button>
-    </form>
   </div>
   <div class="kontakt_info">
     <div>Contact: info@nusnus.dk</div>
     <div>Karrusel, Copenhagen, Refshaleøen</div>
   </div>
+
   <div class="social-icons">
+    <form action="join">
+      <button type="submit">JOIN</button>
+    </form>
     <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
     <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
     <a href="#" target="_blank"><i class="fab fa-spotify"></i></a>
@@ -46,6 +47,15 @@
 
   .social-icons {
     text-align: right;
+    display: flex; /* Aktiverer Flexbox */
+    justify-content: flex-end; /* Justerer børnelementerne (ikonerne) til højre */
+    align-items: center;
+    margin-top: 20px;
+  }
+  .social-icons form {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
   }
 
   .newsletter h2,
@@ -58,7 +68,12 @@
   .kontakt_info div {
     margin-bottom: 10px;
   }
-  .newsletter button {
+
+  .newsletter button:hover {
+    background-color: #0f0; /* Grøn baggrundsfarve ved hover */
+    color: black;
+  }
+  button {
     background-color: transparent; /* Gennemsigtig baggrundsfarve */
     color: #0f0; /* Grøn tekstfarve */
     border: 2px solid #0f0; /* Grøn streg */
@@ -66,10 +81,8 @@
     border-radius: 4px;
     cursor: pointer;
   }
-
-  .newsletter button:hover {
-    background-color: #0f0; /* Grøn baggrundsfarve ved hover */
-    color: black;
+  .social-icons button {
+    justify-content: space-between;
   }
 
   .social-icons a {
