@@ -1,6 +1,13 @@
+@font-face {
+    font-family: 'Overwave';
+    src: url('public/overwave/Overwave.ttf') format('truetype'); /* Erstat med den korrekte sti til din skrifttypefil */
+}
+
 * {
   box-sizing: border-box;
 }
+
+
 
 body {
   background: radial-gradient(circle, #5C1DA9, #000000);
@@ -14,7 +21,7 @@ p {
 
 h1 {
   color: white;
-  font-family: overwave;
+  font-family: Overwave;
   text-align: center;
 
 }
