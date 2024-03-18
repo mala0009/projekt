@@ -7,27 +7,55 @@ body {
 
 }
 
-
-
-
-
 p {
-  color:white
+  color:white;
   font-family: Arial, Helvetica, sans-serif;
-  
 }
 
 h1 {
   color: white;
   font-family: overwave;
+  text-align: center;
+
 }
-h1{
-  color: white;
-}
+
 
 .forside_tekst1,.forside_tekst2 {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 0.5cap;
+   text-align: end;
+   
 }
 
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Juster højden efter dit behov */
+  background-image: url('public/img/karruselbilledeforside.webp'); /* Indsæt stien til dit billede */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.hero h1, .hero h2 {
+  position: absolute;
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero h1 {
+  font-size: 3em; /* Juster størrelsen efter dit behov */
+}
+
+.hero h2 {
+  font-size: 2em; /* Juster størrelsen efter dit behov */
+}
