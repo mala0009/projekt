@@ -1,7 +1,7 @@
 ---
 import "../styles/style.css";
-import header from "../components/header.astro";
 import Layout from "../layouts/Layout.astro";
+import artist_card from "../components/artist_card.astro";
 ---
 
 <Layout>
@@ -10,6 +10,8 @@ import Layout from "../layouts/Layout.astro";
     <div class="forside_tekst1">Refshaleøen</div>
     <div class="forside_tekst2">August 22–24, 2024</div>
   </div>
+
+  <artist_card></artist_card>
 </Layout>
 
 <style>
