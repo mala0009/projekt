@@ -1,18 +1,15 @@
 ---
-import "../styles/style.css";
-import Layout from "../layouts/Layout.astro";
+const dato = Astro.props.dato;
+const hovednavn = Astro.props.hoved;
+const mellemnavn = Astro.props.mellemnavn;
+const lillenavn = Astro.props.lillenavn;
 ---
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+1p:wght@100&family=Open+Sans&family=Oranienbaum&family=Oregano&family=PT+Sans+Narrow&family=Rajdhani&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100&family=Yatra+One&display=swap" rel="stylesheet" />
-
-<Layout>
-  <h1>LINEUP</h1>
-</Layout>
-
 <article>
-  <div><h4>Thursday 22TH AUGUST</h4></div>
+  <div class="program">
+    <h3>{dato}</h3>
+    <div class="hovednavn">{hovednavn}</div>
+    <div class="mellemnavn">{mellemnavn}</div>
+    <div class="lillenavn">{lillenavn}</div>
+  </div>
 </article>
-
-<styles> font-family: "Yatra one" </styles>
