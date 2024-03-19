@@ -22,7 +22,7 @@ import ArtistCard from "../components/artist_card.astro";
     <ArtistCard navn="PETER LÜTZEN" text="Peter Lützen is a Copenhagen based guitarist, singer and songwriter. featuring on danish groups panamah and Humørekspressen." />
   </div>
 
-  <video width="320" height="240" controls>
+  <video id="autoplay-video" width="320" height="240" controls>
     <source src="/public/billeder_videoforside/videoforside.mp4" type="video/mp4" />
     Din browser understøtter ikke videoafspilning.
   </video>
@@ -64,5 +64,28 @@ import ArtistCard from "../components/artist_card.astro";
       color: white;
       text-align: center;
     }
+    #autoplay-video {
+      width: 100%;
+      height: 100vh;
+    }
   </style>
+
+  <script>
+    // Få videoen og dens position
+    const video = document.getElementById("autoplay-video");
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        // Hvis videoen er synlig i visningen
+        if (entry.isIntersecting) {
+          // Start afspilning af videoen
+          video.play();
+          // Stop observationen, så vi ikke starter videoen igen
+          videoObserver.unobserve(entry.target);
+        }
+      });
+    });
+
+    // Observér videoen
+    videoObserver.observe(video);
+  </script>
 </Layout>
