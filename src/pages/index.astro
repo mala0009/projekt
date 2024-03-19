@@ -1,7 +1,7 @@
 ---
 import "../styles/style.css";
 import Layout from "../layouts/Layout.astro";
-import artist_card from "../components/artist_card.astro";
+import ArtistCard from "../components/artist_card.astro";
 ---
 
 <Layout>
@@ -11,11 +11,29 @@ import artist_card from "../components/artist_card.astro";
     <div class="forside_tekst2">August 22–24, 2024</div>
   </div>
 
-  <artist_card></artist_card>
-</Layout>
+  <div class="card">
+    <ArtistCard />
+    <ArtistCard />
+    <ArtistCard />
+  </div>
 
-<style>
-  .h2forside {
-    color: white;
-  }
-</style>
+  <div class="nedtælling1">48:10:08</div>
+  <div class="nedtælling2">UNTIL KARRUSEL</div>
+  <style>
+    .h2forside {
+      color: white;
+    }
+
+    .nedtælling1 {
+      color: white;
+      text-align: center;
+      font-size: 50px;
+      font-weight: 700;
+    }
+
+    .nedtælling2 {
+      color: white;
+      text-align: center;
+    }
+  </style>
+</Layout>
