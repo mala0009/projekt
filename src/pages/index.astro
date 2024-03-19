@@ -7,8 +7,8 @@ import ArtistCard from "../components/artist_card.astro";
 <Layout>
   <div class="hero">
     <h1>Karrusel festival</h1>
-    <div class="forside_tekst1">Refshaleøen</div>
-    <div class="forside_tekst2">August 22–24, 2024</div>
+    <div class="forside_tekst1">August 22–24, 2024</div>
+    <div class="forside_tekst2">REFSHALEØEN</div>
   </div>
 
   <div class="knapper">
@@ -17,9 +17,9 @@ import ArtistCard from "../components/artist_card.astro";
   </div>
 
   <div class="card">
-    <ArtistCard navn="PEGGY GOU" text="Kim Min-ji, known as Peggy Gou is a South Korean DJ, singer, song located in berlin, Germany. She has released seven EP’s on record labels including Ninja Tune and Phonica" />
-    <ArtistCard navn="MINIMALENE" text="Minimalene is a Copenhagen based DJ.Great electronic music cannot be described. It is a feeling. For me, it is spiritualism.”" />
-    <ArtistCard navn="PETER LÜTZEN" text="Peter Lützen is a Copenhagen based guitarist, singer and songwriter. featuring on danish groups panamah and Humørekspressen." />
+    <ArtistCard img="public/billeder_videoforside/minimalene.webp" navn="PEGGY GOU" text="Kim Min-ji, known as Peggy Gou is a South Korean DJ, singer, song located in berlin, Germany. She has released seven EP’s on record labels including Ninja Tune and Phonica" />
+    <ArtistCard img="public/billeder_videoforside/peggygou.webp" navn="MINIMALENE" text="Minimalene is a Copenhagen based DJ.Great electronic music cannot be described. It is a feeling. For me, it is spiritualism.”" />
+    <ArtistCard img="public/billeder_videoforside/peterlutzen.webp" navn="PETER LÜTZEN" text="Peter Lützen is a Copenhagen based guitarist, singer and songwriter. featuring on danish groups panamah and Humørekspressen." />
   </div>
 
   <video id="autoplay-video" width="320" height="240" controls>
@@ -36,10 +36,29 @@ import ArtistCard from "../components/artist_card.astro";
       color: white;
     }
 
+<<<<<<< HEAD
     .grafik1 {
       opacity: 50%;
       width: 20%;
       margin: 120px;
+=======
+    .card {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .forside_tekst1 {
+      text-align: center;
+      font-size: 2rem;
+      padding-top: 20rem;
+      font-weight: bold;
+    }
+
+    .forside_tekst2 {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+>>>>>>> Rose
     }
 
     .knapper {

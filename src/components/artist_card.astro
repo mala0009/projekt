@@ -2,21 +2,18 @@
 const navn = Astro.props.navn;
 const billede = Astro.props.billede;
 const text = Astro.props.text;
+const img = Astro.props.img;
 ---
 
 <article>
   <div class="card">
+    <img src={img} alt="" />
     <h3>{navn}</h3>
     <p>{text}</p>
   </div>
 </article>
 
 <style>
-  .card {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
   h3 {
     color: white;
   }
