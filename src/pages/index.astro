@@ -12,8 +12,8 @@ import ArtistCard from "../components/artist_card.astro";
   </div>
 
   <div class="knapper">
-    <div class="knaphøjre">EXPLORE OUR PROGRAM</div>
     <div class="knapvenstre">BUY TICKETS</div>
+    <div class="knaphøjre">EXPLORE OUR PROGRAM</div>
   </div>
 
   <div class="card">
@@ -24,7 +24,7 @@ import ArtistCard from "../components/artist_card.astro";
 
   <video id="autoplay-video" width="320" height="240" controls>
     <source src="/public/billeder_videoforside/videoforside.mp4" type="video/mp4" />
-     Din browser understøtter ikke videoafspilning.
+    Din browser understøtter ikke videoafspilning.
   </video>
 
   <div class="nedtælling1">48:10:08</div>
@@ -42,26 +42,48 @@ import ArtistCard from "../components/artist_card.astro";
       width: 20%;
       margin: 120px;
     }
-
     .knapper {
       display: flex;
+      flex-direction: column;
+      align-items: center; /* Tilføjet for at centrere knapperne */
       color: #0f0;
     }
 
     .knapvenstre {
-      background-color: transparent; /* Gennemsigtig baggrundsfarve */
-      border: 3px solid #0f0; /* Grøn streg */
-      padding: 8px 16px;
+      background-color: transparent;
+      border: 3px solid #0f0;
+      padding: 8px 20px; /* Justeret padding for at reducere bredden */
       border-radius: 4px;
       cursor: pointer;
+      order: 1;
+      display: inline-flex; /* Gør at elementets bredde afhænger af indholdet */
+      justify-content: center; /* Centrerer teksten */
+      align-items: center; /* Centrerer teksten vertikalt */
+      margin-bottom: 30px;
+      margin-top: 50px;
     }
 
     .knaphøjre {
       color: #0f0;
       text-align: center;
       text-decoration: underline;
+      order: 2;
+      margin-bottom: 50px;
     }
+/* Media query for desktop */
+@media (min-width: 768px) {
+  .knapper {
+    flex-direction: row;
+    justify-content: space-between; /* Fordeler knapperne på hver sin side */
+    align-items: center; /* Centrerer knapperne vertikalt */
+  }
 
+  .knapvenstre, .knaphøjre {
+    margin-top: 50px;
+    margin-bottom: 0; 
+    margin-left: 100px;
+    margin-right: 100px;
+  }
     .nedtælling1 {
       color: white;
       text-align: center;
