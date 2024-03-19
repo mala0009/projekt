@@ -17,17 +17,8 @@ p {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
-  color: white;
-  font-family: Overwave;
-  text-align: center;
 
-}
 
-h2{
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 ul{
   color: white;
@@ -71,4 +62,68 @@ body, html {
 
 .hero h2 {
   font-size: 50px;
+}
+
+
+/* TICKETS */
+
+
+
+/* Stil for mobile-enheder */
+
+h1 {
+  color: white;
+  font-family: Overwave;
+  text-align: center;
+  font-size: 2rem;
+
+}
+
+.tickets_container,
+.eye_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrerer elementerne vandret */
+  justify-content: center; /* Centrerer elementerne lodret */
+  text-align: center; /* Centrerer tekst */
+}
+
+.ticket-image {
+  width: 80%; /* 80% af containerens bredde */
+  max-width: 500px; /* Maksimal bredde for billetbilledet */
+  height: auto; /* Bevarer aspect ratio */
+}
+
+.eye-image {
+  width: 80%; /* 80% af containerens bredde */
+  max-width: 600px; /* Maksimal bredde for øjnebilledet */
+  height: auto; /* Bevarer aspect ratio */
+}
+
+h2{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  margin: 60px;
+}
+
+/* Media query for større skærme */
+@media screen and (min-width: 768px) {
+  .ticket-image {
+    width: 60%; /* 60% af containerens bredde */
+  }
+
+  .eye-image {
+    width: 70%; /* 70% af containerens bredde */
+  }
+
+  h1 {
+  color: white;
+  font-family: Overwave;
+  text-align: center;
+  font-size: 5rem;
+
+}
+
 }
