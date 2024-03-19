@@ -11,6 +11,11 @@ import ArtistCard from "../components/artist_card.astro";
     <div class="forside_tekst2">August 22–24, 2024</div>
   </div>
 
+  <div class="knapper">
+    <div class="knaphøjre">EXPLORE OUR PROGRAM</div>
+    <div class="knapvenstre">BUY TICKETS</div>
+  </div>
+
   <div class="card">
     <ArtistCard navn="PEGGY GOU" text="Kim Min-ji, known as Peggy Gou is a South Korean DJ, singer, song located in berlin, Germany. She has released seven EP’s on record labels including Ninja Tune and Phonica" />
     <ArtistCard navn="MINIMALENE" text="Minimalene is a Copenhagen based DJ.Great electronic music cannot be described. It is a feeling. For me, it is spiritualism.”" />
@@ -27,6 +32,25 @@ import ArtistCard from "../components/artist_card.astro";
   <style>
     .h2forside {
       color: white;
+    }
+
+    .knapper {
+      display: flex;
+      color: #0f0;
+    }
+
+    .knapvenstre {
+      background-color: transparent; /* Gennemsigtig baggrundsfarve */
+      border: 3px solid #0f0; /* Grøn streg */
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .knaphøjre {
+      color: #0f0;
+      text-align: center;
+      text-decoration: underline;
     }
 
     .nedtælling1 {
