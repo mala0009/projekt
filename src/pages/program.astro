@@ -1,15 +1,21 @@
 ---
 import "../styles/style.css";
 import Layout from "../layouts/Layout.astro";
-import Program from "../components/program.astro";
+import Program from "../components/program_.astro";
 ---
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+1p:wght@100&family=Open+Sans&family=Oranienbaum&family=Oregano&family=PT+Sans+Narrow&family=Rajdhani&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100&family=Yatra+One&display=swap" rel="stylesheet" />
 
 <Layout>
   <h1>LINEUP</h1>
+
+  <div class="program">
+    <Program navn="PEGGY GOU" text="Kim Min-ji, known as Peggy Gou is a South Korean DJ, singer, song located in berlin, Germany. She has released seven EP’s on record labels including Ninja Tune and Phonica" />
+    <Program navn="MINIMALENE" text="Minimalene is a Copenhagen based DJ.Great electronic music cannot be described. It is a feeling. For me, it is spiritualism.”" />
+    <Program navn="PETER LÜTZEN" text="Peter Lützen is a Copenhagen based guitarist, singer and songwriter. featuring on danish groups panamah and Humørekspressen." />
+  </div>
 </Layout>
 
-<style>
-  h3 {
-    text-align: center;
-  }
-</style>
+<styles> font-family: "Yatra one" </styles>
