@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   background: radial-gradient(circle, #5C1DA9, #000000);
 
@@ -49,8 +50,8 @@ body, html {
 .hero {
   position: relative;
   width: 100%;
-  height: 700px; /* Juster højden efter dit behov */
-  background-image: url('public/img/hero.webp'); /* Indsæt stien til dit billede */
+  height: 700px; 
+  background-image: url('public/img/hero.webp'); 
   background-size: cover;
   background-position: center;
   color: white;
@@ -64,9 +65,10 @@ body, html {
 }
 
 .hero h1 {
-  font-size: 7em; /* Juster størrelsen efter dit behov */
+  margin-top: 10rem;
+  font-size: 80px
 }
 
 .hero h2 {
-  font-size: 2em; /* Juster størrelsen efter dit behov */
+  font-size: 50px;
 }
