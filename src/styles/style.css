@@ -17,13 +17,7 @@ p {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
-
-ul{
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* FORSIDE */
 
 .forside_tekst1,.forside_tekst2 {
   color: white;
@@ -31,7 +25,6 @@ ul{
   letter-spacing: 0.5cap;
    text-align: end;
 }
-
 
 body, html {
   margin: 0;
@@ -64,12 +57,71 @@ body, html {
   font-size: 50px;
 }
 
+/* ABOUT */
 
-/* TICKETS */
+/* Generelle stilarter */
+h1, h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 15px;
+}
+
+ul {
+  margin-bottom: 15px;
+}
+
+/* Stilarter for mobilvisning */
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  ul {
+    font-size: 14px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+/* Stilarter for desktopvisning */
+@media screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  ul {
+    font-size: 16px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
 
 
 
-/* Stil for mobile-enheder */
+/* TICKETS MOBIL */
 
 h1 {
   color: white;
@@ -108,7 +160,7 @@ h2{
   margin: 60px;
 }
 
-/* Media query for større skærme */
+/* TICKETS DESKTOP */
 @media screen and (min-width: 768px) {
   .ticket-image {
     width: 60%; /* 60% af containerens bredde */
@@ -123,7 +175,7 @@ h2{
   font-family: Overwave;
   text-align: center;
   font-size: 5rem;
+  margin-top: -67px;
 
 }
-
 }

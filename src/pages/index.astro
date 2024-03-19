@@ -11,22 +11,55 @@ import ArtistCard from "../components/artist_card.astro";
     <div class="forside_tekst2">August 22–24, 2024</div>
   </div>
 
+  <div class="knapper">
+    <div class="knaphøjre">EXPLORE OUR PROGRAM</div>
+    <div class="knapvenstre">BUY TICKETS</div>
+  </div>
+
   <div class="card">
     <ArtistCard navn="PEGGY GOU" text="Kim Min-ji, known as Peggy Gou is a South Korean DJ, singer, song located in berlin, Germany. She has released seven EP’s on record labels including Ninja Tune and Phonica" />
     <ArtistCard navn="MINIMALENE" text="Minimalene is a Copenhagen based DJ.Great electronic music cannot be described. It is a feeling. For me, it is spiritualism.”" />
     <ArtistCard navn="PETER LÜTZEN" text="Peter Lützen is a Copenhagen based guitarist, singer and songwriter. featuring on danish groups panamah and Humørekspressen." />
   </div>
 
-  <video width="320" height="240" controls>
+  <video id="autoplay-video" width="320" height="240" controls>
     <source src="/public/billeder_videoforside/videoforside.mp4" type="video/mp4" />
-    Din browser understøtter ikke videoafspilning.
+     Din browser understøtter ikke videoafspilning.
   </video>
 
   <div class="nedtælling1">48:10:08</div>
   <div class="nedtælling2">UNTIL KARRUSEL</div>
+  <div class="grafik1"><img src="../img/gobbel.svg" alt="" /></div>
+  <div class="grafik2"><img src="../img/swirl.svg" alt="" /></div>
+
   <style>
     .h2forside {
       color: white;
+    }
+
+    .grafik1 {
+      opacity: 50%;
+      width: 20%;
+      margin: 120px;
+    }
+
+    .knapper {
+      display: flex;
+      color: #0f0;
+    }
+
+    .knapvenstre {
+      background-color: transparent; /* Gennemsigtig baggrundsfarve */
+      border: 3px solid #0f0; /* Grøn streg */
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .knaphøjre {
+      color: #0f0;
+      text-align: center;
+      text-decoration: underline;
     }
 
     .nedtælling1 {
@@ -40,5 +73,28 @@ import ArtistCard from "../components/artist_card.astro";
       color: white;
       text-align: center;
     }
+    #autoplay-video {
+      width: 100%;
+      height: 100vh;
+    }
   </style>
+
+  <script>
+    // Få videoen og dens position
+    const video = document.getElementById("autoplay-video");
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        // Hvis videoen er synlig i visningen
+        if (entry.isIntersecting) {
+          // Start afspilning af videoen
+          video.play();
+          // Stop observationen, så vi ikke starter videoen igen
+          videoObserver.unobserve(entry.target);
+        }
+      });
+    });
+
+    // Observér videoen
+    videoObserver.observe(video);
+  </script>
 </Layout>
