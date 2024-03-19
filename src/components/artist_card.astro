@@ -1,11 +1,13 @@
 ---
-
+const navn = Astro.props.navn;
+const billede = Astro.props.billede;
+const text = Astro.props.text;
 ---
 
 <article>
   <div class="card">
-    <img src="" alt="" />
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, eos inventore, doloribus non eum excepturi laboriosam quibusdam, dicta blanditiis sapiente facere dolorum vel ipsa impedit voluptatem unde praesentium iusto facilis.</p>
+    <h3>{navn}</h3>
+    <p>{text}</p>
   </div>
 </article>
 
@@ -13,5 +15,9 @@
   .card {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  h3 {
+    color: white;
   }
 </style>
