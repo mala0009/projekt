@@ -12,35 +12,12 @@ console.log(data);
 data.forEach((datae) => {
   console.log(datae.hovednavn);
 });
-/*
-{
-    id: 18,
-    navn: 'FJAAK DJ SET',
-    overskrift: 'GERMANY',
-    beskrivelse: '',
-    lokation: 'maanegen',
-    dato: 'saturday',
-    'spotify ': 'https://open.spotify.com/artist/4qG1qjeHfkASTdyRGbLWbV?si=b46_cA6FREGp4WDi0g_R1A&dl_branch=1&nd=1&dlsi=6d6e7045e9ef4ff1',
-    instagram: 'https://www.instagram.com/fjaak/',
-    artisterpictures: 'fjaak.webp',
-    soundcloud: ''
-  },
-*/
 ---
 
-<!-- {
-  data.map((artist) => {
-    return <p>{artist.navn}</p>;
-  })
-} --><!-- {
-  data.filter((artist) => {
-    return <p>{artist.navn}</p>;
-  })
-} -->
 <article>
   <div class="program">
     <div><h3>{title}</h3></div>
-    <div>
+    <div class="hovednavn">
       {
         data.map((onedata) => {
           return <h4>{onedata.hovednavn}</h4>;
@@ -48,7 +25,7 @@ data.forEach((datae) => {
       }
     </div>
 
-    <div>
+    <div class="mellemnavn">
       {
         data.map((onedata) => {
           return <h5>{onedata.mellemnavn}</h5>;
@@ -56,7 +33,7 @@ data.forEach((datae) => {
       }
     </div>
 
-    <div>
+    <div class="lillenavn">
       {
         data.map((onedata) => {
           return <h6>{onedata.lillenavn}</h6>;
@@ -70,11 +47,50 @@ data.forEach((datae) => {
   .program {
     color: white;
     font-family: "Yatra one";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .program h3 {
     color: #10ff3d;
     text-align: center;
     font-size: small;
+    margin-top: 72px;
+    margin-bottom: 14px;
+  }
+
+  h4 {
+    text-align: center;
+    justify-content: space-around;
+  }
+  .hovednavn {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .mellemnavn {
+    display: flex;
+    gap: 11px;
+    font-size: 1.4rem;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    margin-top: -26px;
+  }
+
+  .lillenavn {
+    display: flex;
+    gap: 11px;
+    font-size: large;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    margin-top: -26px;
+  }
+  h6 {
+    margin-bottom: 72px;
+    margin-top: 23px;
   }
 </style>
