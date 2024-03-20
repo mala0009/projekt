@@ -7,7 +7,9 @@ import footer from "../components/footer.astro";
 
 <Layout>
   <h1>ABOUT</h1>
-  <img src="../img/about.webp" alt="about" />
+  <div class="about_img">
+    <img src="../img/about.webp" alt="about" />
+  </div>
 
   <div class="overskrift1">
     <h2>FESTIVAL EXPERIENCE</h2>
@@ -35,6 +37,10 @@ import footer from "../components/footer.astro";
   h2 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+  }
+
+  .about_img img {
+    max-width: 100%;
   }
 
   p {
