@@ -26,11 +26,10 @@ import ArtistCard from "../components/artist_card.astro";
   <div class="video">
     <video id="autoplay-video" width="320" height="240" controls>
       <source src="/public/billeder_videoforside/videoforside.mp4" type="video/mp4" />
-      Din browser understøtter ikke videoafspilning.
+       Din browser understøtter ikke videoafspilning.
     </video>
   </div>
-
-  <div class="nedtælling1">48:10:08</div>
+  <div id="countdown" class="nedtælling1">48:10:08</div>
   <div class="nedtælling2">UNTIL KARRUSEL</div>
   <div class="grafik1"><img src="../img/gobbel.svg" alt="" /></div>
 
@@ -204,6 +203,34 @@ import ArtistCard from "../components/artist_card.astro";
       margin-top: -18%;
       filter: opacity(100%);
     }
+
+    @media (max-width: 600px) {
+      .hero img {
+        width: 100%;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .hero h1,
+      .hero h2 {
+        grid-column: 1;
+        grid-row: 1;
+        filter: opacity(100%);
+      }
+
+      .hero h2 {
+        font-size: 20px;
+        margin-top: 10%;
+      }
+
+      .hero h3 {
+        font-size: 15px;
+        margin-top: -18%;
+        filter: opacity(100%);
+      }
+    }
   </style>
 
   <script>
@@ -223,5 +250,30 @@ import ArtistCard from "../components/artist_card.astro";
 
     // Observér videoen
     videoObserver.observe(video);
+
+    // Funktion til at opdatere nedtællingen
+    function updateCountdown() {
+      // Tidsstempel for slutdatoen (august 24, 2024 00:00:00)
+      const endTime = new Date("August 24, 2024 00:00:00").getTime();
+      // Tidsstempel for nuværende tid
+      const now = new Date().getTime();
+      // Forskellen mellem slutdatoen og nuværende tid
+      const difference = endTime - now;
+
+      // Beregning af tid tilbage i dage, timer, minutter og sekunder
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      // Opdatering af nedtællingselementet med den beregnede tid
+      document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    // Opdater nedtællingen hvert sekund
+    setInterval(updateCountdown, 1000);
+
+    // Start nedtællingen ved indlæsning af siden
+    updateCountdown();
   </script>
 </Layout>
