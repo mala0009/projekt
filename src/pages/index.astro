@@ -6,8 +6,10 @@ import ArtistCard from "../components/artist_card.astro";
 
 <Layout staticNav>
   <div class="hero">
-
     <h1>Karrusel festival</h1>
+     
+<img class="hero_img" src="/img/hero.webp" alt="hero">
+
     <div class="forside_tekst1">August 22–24, 2024</div>
     <div class="forside_tekst2">REFSHALEØEN</div>
   </div>
@@ -175,7 +177,6 @@ body, html {
   position: relative;
   width: 100%;
   height: 700px; 
-  background-image: url('/public/img/hero.webp'); 
   background-size: cover;
   background-position: center;
   color: white;
@@ -184,7 +185,7 @@ body, html {
 }
 
 .hero img{
-   filter: opacity(20);
+ opacity: 50%;
 }
 
 .hero h1, .hero h2 {
