@@ -39,7 +39,12 @@ const { staticNav } = Astro.props;
   }
   .logo img {
     width: 100px;
-    margin: 10px;
+    margin: 24px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center; /* Centrer lodret */
   }
 
   .menu.active {
@@ -47,7 +52,6 @@ const { staticNav } = Astro.props;
     flex-direction: column;
     align-items: center;
     background-color: rgba(92, 29, 169, 0.85);
-
     position: absolute; /* Eller 'fixed' afhængigt af dit design */
     top: 0;
     left: 0;
@@ -111,6 +115,7 @@ const { staticNav } = Astro.props;
       justify-content: flex-end; /* Placerer menuen i højre side */
       text-transform: uppercase;
       font-size: 0.8rem; /* Fra dit oprindelige design */
+      padding-right: 3rem;
     }
 
     .burger {
