@@ -3,13 +3,53 @@ const dato = Astro.props.dato;
 const hovednavn = Astro.props.hoved;
 const mellemnavn = Astro.props.mellemnavn;
 const lillenavn = Astro.props.lillenavn;
+const data = await fetch("https://lbqpnyuobrgziblvfawh.supabase.co/rest/v1/karrusel", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxicXBueXVvYnJnemlibHZmYXdoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0ODkyMTAsImV4cCI6MjAyNjA2NTIxMH0.gg9jixgR3HvEJ6hDJP0wxWX9Q-WNJibsw2W0ThsEHVw",
+  },
+}).then((res) => res.json());
+
+console.log(data);
+/*
+{
+    id: 18,
+    navn: 'FJAAK DJ SET',
+    overskrift: 'GERMANY',
+    beskrivelse: '',
+    lokation: 'maanegen',
+    dato: 'saturday',
+    'spotify ': 'https://open.spotify.com/artist/4qG1qjeHfkASTdyRGbLWbV?si=b46_cA6FREGp4WDi0g_R1A&dl_branch=1&nd=1&dlsi=6d6e7045e9ef4ff1',
+    instagram: 'https://www.instagram.com/fjaak/',
+    artisterpictures: 'fjaak.webp',
+    soundcloud: ''
+  },
+*/
 ---
+
+<!-- {
+  data.map((artist) => {
+    return <p>{artist.navn}</p>;
+  })
+} -->{
+  data.filter((artist) => {
+    return <p>{artist.navn}</p>;
+  })
+}
 
 <article>
   <div class="program">
     <h3>{dato}</h3>
-    <div class="hovednavn">{hovednavn}</div>
-    <div class="mellemnavn">{mellemnavn}</div>
-    <div class="lillenavn">{lillenavn}</div>
+    <div class="hovednavn">hdddddd</div>
+
+    <div class="mellemnavn">jdddddd</div>
+
+    <div class="lillenavn">kddddd</div>
   </div>
 </article>
+
+<style>
+  .program {
+    text: white;
+  }
+</style>
