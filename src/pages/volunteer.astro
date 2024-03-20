@@ -50,11 +50,13 @@ import Layout from "../layouts/Layout.astro";
   .volunteer_img img {
     max-width: 100%;
     object-fit: cover;
+    align-self: stretch;
   }
 
   @media (min-width: 768px) {
     .volunteer_img {
-      grid: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       justify-content: center; /* Center images horizontally */
       text-align: center;
     }
