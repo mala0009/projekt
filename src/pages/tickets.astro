@@ -7,12 +7,109 @@ import Layout from "../layouts/Layout.astro";
   <h1>TICKETS</h1>
 
   <div class="tickets_container">
-    <img src="../img/billet.svg" alt="billet" class="ticket-image" />
+    <img src="../img/billet.svg" alt="billet" class="ticket-image" id="ticket" />
   </div>
 
   <h2>KEEP AN EYE OUT FOR OUR 1 DAY TICKETS!</h2>
 
   <div class="eye_container">
-    <img src="../img/øjne.svg" alt="" class="eye-image" />
+    <img src="../img/øjne.svg" alt="" class="eye-image blinking-eye" />
   </div>
 </Layout>
+
+<style>
+  /* TICKETS MOBIL */
+
+  h1 {
+    color: white;
+    font-family: Overwave;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .tickets_container,
+  .eye_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrerer elementerne vandret */
+    justify-content: center; /* Centrerer elementerne lodret */
+    text-align: center; /* Centrerer tekst */
+  }
+
+  .ticket-image {
+    width: 80%; /* 80% af containerens bredde */
+    max-width: 500px; /* Maksimal bredde for billetbilledet */
+    height: auto; /* Bevarer aspect ratio */
+    transition: transform 0.5s ease-in-out; /* Tilføjer en glat overgang */
+  }
+
+  .eye-image {
+    width: 80%; /* 80% af containerens bredde */
+    max-width: 600px; /* Maksimal bredde for øjnebilledet */
+    height: auto; /* Bevarer aspect ratio */
+  }
+
+  .blinking-eye {
+    animation: blink 2s infinite;
+  }
+
+  h2 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    margin: 60px;
+  }
+
+  /* TICKETS DESKTOP */
+  @media screen and (min-width: 768px) {
+    .ticket-image {
+      width: 60%; /* 60% af containerens bredde */
+    }
+
+    .eye-image {
+      width: 70%; /* 70% af containerens bredde */
+    }
+
+    h1 {
+      color: white;
+      font-family: Overwave;
+      text-align: center;
+      font-size: 5rem;
+    }
+  }
+
+  /* Ryste-animation */
+  .ticket-image:hover {
+    animation: shake 0.5s ease-in-out infinite;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px) rotate(-1deg);
+    }
+    50% {
+      transform: translateX(5px) rotate(1deg);
+    }
+    75% {
+      transform: translateX(-5px) rotate(-1deg);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  /* Blinkende øje-animation */
+  @keyframes blink {
+    0%,
+    100% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(0);
+    }
+  }
+</style>
