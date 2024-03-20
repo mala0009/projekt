@@ -40,23 +40,27 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .volunteer_img {
+    grid: flex;
     align-items: center;
     justify-content: center; /* Center horizontally */
+    max-width: 100%;
+    object-fit: cover;
   }
 
   .volunteer_img img {
-    margin: 0 5px; /* Optional margin between images */
+    max-width: 100%;
+    object-fit: cover;
   }
 
   @media (min-width: 768px) {
     .volunteer_img {
-      grid: flex;
-      align-items: center;
-      justify-content: center; /* Center horizontally */
+      flex-wrap: wrap;
+      justify-content: center; /* Center images horizontally */
+      text-align: center;
     }
-
     .volunteer_img img {
-      margin: 0 5px; /* Optional margin between images */
+      flex: 0 0 calc(50% - 10px); /* Adjust to fit 2 images per row with some spacing */
+      margin: 5px; /* Adjust margin between images */
     }
   }
 </style>
