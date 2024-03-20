@@ -4,11 +4,12 @@ import Layout from "../layouts/Layout.astro";
 import ArtistCard from "../components/artist_card.astro";
 ---
 
-<Layout>
+<Layout staticNav>
   <div class="hero">
+    <img class="hero_img" src="/img/hero.webp" alt="hero" />
     <h1>Karrusel festival</h1>
-    <div class="forside_tekst1">August 22–24, 2024</div>
-    <div class="forside_tekst2">REFSHALEØEN</div>
+    <h2 class="forside_tekst1">August 22–24, 2024</h2>
+    <h3 class="forside_tekst2">REFSHALEØEN</h3>
   </div>
 
   <div class="knapper">
@@ -16,24 +17,50 @@ import ArtistCard from "../components/artist_card.astro";
     <div class="knaphøjre">EXPLORE OUR PROGRAM</div>
   </div>
 
+<<<<<<< HEAD
   <div class="card">
+=======
+  <div class="cardwrapper">
+>>>>>>> master
     <ArtistCard img="/billeder_videoforside/minimalene.webp" navn="PEGGY GOU" text="Kim Min-ji, known as Peggy Gou is a South Korean DJ, singer, song located in berlin, Germany. She has released seven EP’s on record labels including Ninja Tune and Phonica" />
     <ArtistCard img="/billeder_videoforside/peggygou.webp" navn="MINIMALENE" text="Minimalene is a Copenhagen based DJ.Great electronic music cannot be described. It is a feeling. For me, it is spiritualism.”" />
     <ArtistCard img="/billeder_videoforside/peterlutzen.webp" navn="PETER LÜTZEN" text="Peter Lützen is a Copenhagen based guitarist, singer and songwriter. featuring on danish groups panamah and Humørekspressen." />
   </div>
 
+<<<<<<< HEAD
   <video id="autoplay-video" width="320" height="240" controls>
     <source src="/billeder_videoforside/videoforside.mp4" type="video/mp4" />
     Din browser understøtter ikke videoafspilning.
   </video>
 
   <div class="nedtælling1">48:10:08</div>
+=======
+  <div class="video">
+    <video id="autoplay-video" width="320" height="240" controls>
+      <source src="/public/billeder_videoforside/videoforside.mp4" type="video/mp4" />
+      Din browser understøtter ikke videoafspilning.
+    </video>
+  </div>
+  <div id="countdown" class="nedtælling1">48:10:08</div>
+>>>>>>> master
   <div class="nedtælling2">UNTIL KARRUSEL</div>
   <div class="grafik1"><img src="../img/gobbel.svg" alt="" /></div>
 
   <style>
     .h2forside {
       color: white;
+    }
+
+    .video {
+      width: 100%;
+    }
+
+    .cardwrapper {
+      display: grid;
+    }
+    #autoplay-video {
+      width: 100%;
+      height: auto;
     }
 
     .grafik1 {
@@ -47,7 +74,6 @@ import ArtistCard from "../components/artist_card.astro";
       align-items: center; /* Tilføjet for at centrere knapperne */
       color: #0f0;
     }
-
     .knapvenstre {
       background-color: transparent;
       border: 3px solid #0f0;
@@ -69,21 +95,7 @@ import ArtistCard from "../components/artist_card.astro";
       order: 2;
       margin-bottom: 50px;
     }
-/* Media query for desktop */
-@media (min-width: 768px) {
-  .knapper {
-    flex-direction: row;
-    justify-content: space-between; /* Fordeler knapperne på hver sin side */
-    align-items: center; /* Centrerer knapperne vertikalt */
-    padding-bottom: 50px;
-  }
 
-  .knapvenstre, .knaphøjre {
-    margin-top: 50px;
-    margin-bottom: 0; 
-    margin-left: 100px;
-    margin-right: 100px;
-  }
     .nedtælling1 {
       color: white;
       text-align: center;
@@ -95,9 +107,138 @@ import ArtistCard from "../components/artist_card.astro";
       color: white;
       text-align: center;
     }
-    #autoplay-video {
-      width: 100%;
-      height: 100vh;
+    /* Media query for desktop */
+    @media (min-width: 768px) {
+      .knapper {
+        flex-direction: row;
+        justify-content: space-between; /* Fordeler knapperne på hver sin side */
+        align-items: center; /* Centrerer knapperne vertikalt */
+        padding-bottom: 50px;
+      }
+
+      .cardwrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .video {
+        width: 100%;
+      }
+
+      #autoplay-video {
+        width: 100%;
+        height: auto;
+      }
+
+      .knapvenstre,
+      .knaphøjre {
+        margin-top: 50px;
+        margin-bottom: 0;
+        margin-left: 100px;
+        margin-right: 100px;
+      }
+      .nedtælling1 {
+        color: white;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 700;
+      }
+
+      .nedtælling2 {
+        color: white;
+        text-align: center;
+      }
+      #autoplay-video {
+        width: 100%;
+        height: 100vh;
+      }
+    }
+
+    /* FORSIDE */
+
+    .forside_tekst1,
+    .forside_tekst2 {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      letter-spacing: 0.5cap;
+      text-align: center;
+
+      font-weight: bolder;
+      font-size: 2rem;
+    }
+    .forside_tekst1 {
+      top: 50%; /* Juster denne værdi, så den passer under h1 */
+    }
+
+    .forside_tekst2 {
+      top: 60%; /* Juster denne værdi, så den passer under forside_tekst1 */
+    }
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero {
+      display: grid;
+      place-items: center;
+    }
+
+    .hero h1 {
+      font-size: 85px;
+      filter: opacity(100%);
+      margin-bottom: 30%;
+    }
+    .hero img {
+      grid-column: 1;
+      grid-row: 1;
+      filter: opacity(50%);
+    }
+
+    .hero h1,
+    .hero h2 {
+      grid-column: 1;
+      grid-row: 1;
+      filter: opacity(100%);
+    }
+
+    .hero h2 {
+      font-size: 50px;
+      margin-top: 20%;
+    }
+
+    .hero h3 {
+      font-size: 40px;
+      margin-top: -18%;
+      filter: opacity(100%);
+    }
+
+    @media (max-width: 600px) {
+      .hero img {
+        width: 100%;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .hero h1,
+      .hero h2 {
+        grid-column: 1;
+        grid-row: 1;
+        filter: opacity(100%);
+      }
+
+      .hero h2 {
+        font-size: 20px;
+        margin-top: 10%;
+      }
+
+      .hero h3 {
+        font-size: 15px;
+        margin-top: -18%;
+        filter: opacity(100%);
+      }
     }
   </style>
 
@@ -118,5 +259,30 @@ import ArtistCard from "../components/artist_card.astro";
 
     // Observér videoen
     videoObserver.observe(video);
+
+    // Funktion til at opdatere nedtællingen
+    function updateCountdown() {
+      // Tidsstempel for slutdatoen (august 24, 2024 00:00:00)
+      const endTime = new Date("August 24, 2024 00:00:00").getTime();
+      // Tidsstempel for nuværende tid
+      const now = new Date().getTime();
+      // Forskellen mellem slutdatoen og nuværende tid
+      const difference = endTime - now;
+
+      // Beregning af tid tilbage i dage, timer, minutter og sekunder
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      // Opdatering af nedtællingselementet med den beregnede tid
+      document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    // Opdater nedtællingen hvert sekund
+    setInterval(updateCountdown, 1000);
+
+    // Start nedtællingen ved indlæsning af siden
+    updateCountdown();
   </script>
 </Layout>

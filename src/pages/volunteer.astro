@@ -13,12 +13,20 @@ import Layout from "../layouts/Layout.astro";
   </div>
 
   <p>Volunteer at Karrusel festival and become a part of our fantastic community! Experience the togetherness and get a lot of benefits.</p>
+
+  <div class="volunteer_img">
+    <img src="/public/img_volunteer/416740582_2796852070480542_3424358261235819067_n.webp" alt="" />
+    <img src="/public/img_volunteer/432182244_1379591515883772_8019016875645802754_n.webp" alt="" />
+    <img src="/public/img_volunteer/432354492_1192449935494540_468586210910036544_n.webp" alt="" />
+    <img src="/public/img_volunteer/432425983_311463014944388_5749115331240799695_n.webp" alt="" />
+  </div>
 </Layout>
 
 <style>
   .knap_volunteer {
     display: flex;
     color: #0f0;
+    justify-content: center;
   }
 
   .knap1 {
@@ -29,5 +37,32 @@ import Layout from "../layouts/Layout.astro";
     border-radius: 4px;
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .volunteer_img {
+    grid: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .volunteer_img img {
+    max-width: 100%;
+    object-fit: cover;
+    align-self: stretch;
+  }
+
+  @media (min-width: 768px) {
+    .volunteer_img {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center; /* Center images horizontally */
+      text-align: center;
+    }
+    .volunteer_img img {
+      flex: 0 0 calc(50% - 10px); /* Adjust to fit 2 images per row with some spacing */
+      margin: 5px; /* Adjust margin between images */
+    }
   }
 </style>

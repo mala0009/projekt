@@ -1,24 +1,94 @@
 ---
 import "../styles/style.css";
 import Layout from "../layouts/Layout.astro";
+import header from "../components/header.astro";
+import footer from "../components/footer.astro";
 ---
-
-import header from "../components/header.astro"; import footer from "../components/footer.astro"; import Layout from "../Layout.astro"; ---
 
 <Layout>
   <h1>ABOUT</h1>
-  <img src="../img/about.webp" alt="about" />
+  <div class="about_img">
+    <img src="../img/about.webp" alt="about" />
+  </div>
 
-  <h2>FESTIVAL EXPERIENCE</h2>
-  <p>Karrusel is dedicated to creating a festival environment free from harassment, where everyone is encouraged to freely express themselves. We warmly welcome all individuals, celebrating diverse orientations, experiences, histories, and backgrounds. Our festival thrives on mutual care, respect for personal boundaries, appreciation of diversity, and active participation in our community. Should you ever feel unsafe, please don't hesitate to contact our awareness team. Dressed in pink vests, they'll be patrolling the festival grounds and stationed at their base (location indicated on this map). Any festival staff member will be more than willing to direct you to them.</p>
+  <div class="overskrift1">
+    <h2>FESTIVAL EXPERIENCE</h2>
+  </div>
+  <div class="tekst1">
+    <p>Karrusel is dedicated to creating a festival environment free from harassment, where everyone is encouraged to freely express themselves. We warmly welcome all individuals, celebrating diverse orientations, experiences, histories, and backgrounds. Our festival thrives on mutual care, respect for personal boundaries, appreciation of diversity, and active participation in our community. Should you ever feel unsafe, please don't hesitate to contact our awareness team. Dressed in pink vests, they'll be patrolling the festival grounds and stationed at their base (location indicated on this map). Any festival staff member will be more than willing to direct you to them.</p>
+  </div>
 
-  <p>We urge everyone to:</p>
-
+  <div class="forholdsregler">
+    <p>We urge everyone to:</p>
+  </div>
   <ul>
     <li>Be accountable for their actions.</li>
     <li>Honor their own and others' personal space and limits.</li>
     <li>Choose to speak up instead of turning away</li>
   </ul>
-
-  <p>We look forward to seeing you!</p>
+  <div class="sidstetekst">
+    <p>We look forward to seeing you!</p>
+  </div>
 </Layout>
+
+<style>
+  /* Generelle stilarter */
+  h1,
+  h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+
+  .about_img img {
+    max-width: 100%;
+  }
+
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  ul {
+    padding: 0;
+    margin: 40px;
+  }
+
+  .forholdsregler {
+    font-weight: 700;
+  }
+
+  /* Stilarter for mobilvisning */
+  @media screen and (max-width: 767px) {
+    .overskrift1 {
+      text-align: center;
+    }
+
+    .tekst1,
+    .forholdsregler,
+    .sidstetekst {
+      margin: 20px 0;
+      line-height: 1.5;
+    }
+  }
+
+  /* Stilarter for desktopvisning */
+  @media screen and (min-width: 768px) {
+    .Layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .tekst1,
+    .forholdsregler,
+    .sidstetekst {
+      margin: 40px;
+      line-height: 2;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+</style>
