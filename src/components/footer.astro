@@ -9,6 +9,12 @@
       <div class="newsletter">
         <div class="newsletter">Newsletter</div>
         <div>Sign up to the newsletter and be the first to know about music announcement, events and much more.</div>
+        <div class="mobileshow">
+          <div class="kontakt_info">
+            <div>Contact: info@nusnus.dk</div>
+            <div>Karrusel, Copenhagen, Refshaleøen</div>
+          </div>
+        </div>
         <form action="join">
           <button type="submit">JOIN</button>
         </form>
@@ -16,7 +22,7 @@
     </div>
 
     <div class="right-section">
-      <div class="kontakt_info">
+      <div class="kontakt_info mobilehide">
         <div>Contact: info@nusnus.dk</div>
         <div>Karrusel, Copenhagen, Refshaleøen</div>
       </div>
@@ -33,10 +39,6 @@
   footer {
     color: #fff;
     padding: 20px;
-    display: flex;
-    flex-wrap: wrap; /* Tillad linjebrydning */
-    justify-content: space-between;
-    align-items: flex-start;
     font-family: Arial, Helvetica, sans-serif;
   }
 
@@ -105,5 +107,26 @@
 
   .social-icons a:hover {
     text-decoration: underline;
+  }
+
+  .mobileshow {
+    display: none;
+  }
+
+  .mobilehide {
+    display: block;
+  }
+  @media screen and (max-width: 767px) {
+    .mobileshow {
+      display: block;
+    }
+
+    .mobilehide {
+      display: none;
+    }
+    .right-section {
+      display: grid;
+      align-content: end;
+    }
   }
 </style>
