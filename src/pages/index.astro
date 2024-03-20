@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import ArtistCard from "../components/artist_card.astro";
 ---
 
-<Layout>
+<Layout staticNav>
   <div class="hero">
     <h1>Karrusel festival</h1>
     <div class="forside_tekst1">August 22–24, 2024</div>
@@ -17,9 +17,9 @@ import ArtistCard from "../components/artist_card.astro";
   </div>
 
   <div class="card">
-    <ArtistCard img="public/billeder_videoforside/minimalene.webp" navn="PEGGY GOU" text="Kim Min-ji, known as Peggy Gou is a South Korean DJ, singer, song located in berlin, Germany. She has released seven EP’s on record labels including Ninja Tune and Phonica" />
-    <ArtistCard img="public/billeder_videoforside/peggygou.webp" navn="MINIMALENE" text="Minimalene is a Copenhagen based DJ.Great electronic music cannot be described. It is a feeling. For me, it is spiritualism.”" />
-    <ArtistCard img="public/billeder_videoforside/peterlutzen.webp" navn="PETER LÜTZEN" text="Peter Lützen is a Copenhagen based guitarist, singer and songwriter. featuring on danish groups panamah and Humørekspressen." />
+    <ArtistCard img="/billeder_videoforside/minimalene.webp" navn="PEGGY GOU" text="Kim Min-ji, known as Peggy Gou is a South Korean DJ, singer, song located in berlin, Germany. She has released seven EP’s on record labels including Ninja Tune and Phonica" />
+    <ArtistCard img="/billeder_videoforside/peggygou.webp" navn="MINIMALENE" text="Minimalene is a Copenhagen based DJ.Great electronic music cannot be described. It is a feeling. For me, it is spiritualism.”" />
+    <ArtistCard img="/billeder_videoforside/peterlutzen.webp" navn="PETER LÜTZEN" text="Peter Lützen is a Copenhagen based guitarist, singer and songwriter. featuring on danish groups panamah and Humørekspressen." />
   </div>
 
   <video id="autoplay-video" width="320" height="240" controls>

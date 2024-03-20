@@ -1,8 +1,8 @@
 ---
-
+const { staticNav } = Astro.props;
 ---
 
-<nav>
+<nav class={staticNav ? "static" : null}>
   <div class="logo">
     <a href="/">
       <img src="/img/logopt2.png" alt="Logo" />
@@ -30,10 +30,13 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
     z-index: 50;
   }
 
+  .static {
+    position: absolute;
+  }
   .logo img {
     width: 100px;
     margin: 10px;
