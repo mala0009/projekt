@@ -10,15 +10,15 @@ export async function getStaticPaths() {
   return data.map((artist) => {
     return {
       params: { slug: artist.slug },
-      props: { artist },
+      props: { myData: artist },
     };
   });
 }
-
-const { artist } = Astro.props;
-console.log(artist);
+const { myData } = Astro.props;
+console.log(myData);
 ---
 
-<!-- <MainLayout title= {myData.name}>
-    <h2> {myData.name} </h2>
-    <p> {myData.}</p> </MainLayout> -->
+<Layout title={myData.navn}>
+  <h2>{myData.navn}</h2>
+  <h2>{myData.lokation}</h2>
+</Layout>
