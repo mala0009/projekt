@@ -12,28 +12,19 @@ body {
 
 }
 
-p {
+h1{
+  color: white;
+  font-family: overwave;
+  text-align: center;
+}
+
+p,h2,h3 {
   color:white;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* ABOUT */
 
-/* Generelle stilarter */
-h1, h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
-
-p {
-  font-family: Arial, Helvetica, sans-serif;
-  margin-bottom: 15px;
-}
-
-ul {
-  margin-bottom: 15px;
-}
 
 /* Stilarter for mobilvisning */
 @media screen and (max-width: 767px) {
