@@ -1,7 +1,10 @@
 ---
-const { navn, link, type } = Astro.props;
+const { data } = Astro.props;
+console.log(data);
 ---
 
-<a href={`artists/${link}`}>
-  <h4 class={type}>{navn}</h4>
-</a>;
+<a href={`/artists/${data.slug}`}>
+  <article>
+    <h4>{data.navn}</h4>
+  </article>
+</a>

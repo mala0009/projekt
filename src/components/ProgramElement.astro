@@ -1,6 +1,7 @@
 ---
 import ProgramElementName from "../components/ProgramElementName.astro";
-const { dato, hovednavn, mellemnavn, lillenavn, spilledag, title } = Astro.props;
+import ArtistCard from "./artist_card.astro";
+const { dato, hovednavn, mellemnavn, lillenavn, spilledag, title, navn } = Astro.props;
 const data = await fetch(`https://lbqpnyuobrgziblvfawh.supabase.co/rest/v1/karrusel?dato=eq.${spilledag}`, {
   method: "GET",
   headers: {
@@ -16,8 +17,8 @@ console.log(data);
   <div class="program">
     <div class="hovednavn">
       {
-        data.map((onedata) => {
-          return <ProgramElementName navn={onedata.navn} link={onedata.slug} type={"big"} />;
+        data.map((artist) => {
+          <ProgramElementName id={artist.id} navn={artist.navn} link={artist.slug} type={"big"} />;
         })
       }
     </div>
