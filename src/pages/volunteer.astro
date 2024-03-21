@@ -6,13 +6,16 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
   <h1>VOLUNTEER</h1>
 
-  <h2>DO YOU WANNA BE A PART OF OUR TEAM?</h2>
+  <div class="content_container">
+    <div class="tekstvenstre">
+      <h2>DO YOU WANNA BE A PART OF OUR TEAM?</h2>
+      <p>Volunteer at Karrusel festival and become a part of our fantastic community! Experience the togetherness and get a lot of benefits.</p>
+    </div>
 
-  <div class="knap_volunteer">
-    <div class="knap1">JOIN US</div>
+    <div class="knap_volunteer">
+      <div class="knap1">JOIN US</div>
+    </div>
   </div>
-
-  <p>Volunteer at Karrusel festival and become a part of our fantastic community! Experience the togetherness and get a lot of benefits.</p>
 
   <div class="volunteer_img">
     <img src="/public/img_volunteer/416740582_2796852070480542_3424358261235819067_n.webp" alt="" />
@@ -20,20 +23,32 @@ import Layout from "../layouts/Layout.astro";
     <img src="/public/img_volunteer/432354492_1192449935494540_468586210910036544_n.webp" alt="" />
     <img src="/public/img_volunteer/432425983_311463014944388_5749115331240799695_n.webp" alt="" />
   </div>
+
+  <div class="readmore">
+    <p>Read more about Voluteering at Karrusel!</p>
+  </div>
 </Layout>
 
 <style>
+  .readmore {
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.3cap;
+  }
+
   .knap_volunteer {
     display: flex;
     color: #0f0;
     justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .knap1 {
     border: 3px solid #0f0; /* Grøn streg */
     text-align: center;
-    border: 2px solid #0f0;
-    padding: 8px 16px;
+    border: 3px solid #0f0;
+    padding: 15px 30px;
     border-radius: 4px;
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
@@ -47,6 +62,14 @@ import Layout from "../layouts/Layout.astro";
     object-fit: cover;
   }
 
+  .tekstvenstre {
+    flex: 1; /* Flex grow to fill remaining space */
+  }
+
+  .knap_volunteer {
+    flex-shrink: 0; /* Prevent button from shrinking */
+    margin-left: 20px; /* Add some spacing between text and button */
+  }
   .volunteer_img img {
     max-width: 100%;
     object-fit: cover;
@@ -63,6 +86,25 @@ import Layout from "../layouts/Layout.astro";
     .volunteer_img img {
       flex: 0 0 calc(50% - 10px); /* Adjust to fit 2 images per row with some spacing */
       margin: 5px; /* Adjust margin between images */
+    }
+    .content_container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto; /* Center content horizontally */
+      max-width: 768px; /* Limit maximum width */
+      padding: 0 20px; /* Add some padding */
+      margin-bottom: 20px;
+    }
+
+    .tekstvenstre {
+      flex: 1; /* Flex grow to fill remaining space */
+    }
+
+    .knap_volunteer {
+      flex-shrink: 0; /* Prevent button from shrinking */
+      display: flex; /* Display button container as flex */
+      align-items: center; /* Align items vertically */
     }
   }
 </style>
