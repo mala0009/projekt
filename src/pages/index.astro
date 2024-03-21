@@ -29,7 +29,7 @@ import ArtistCard from "../components/artist_card.astro";
 
   <video id="autoplay-video" width="320" height="240" controls>
     <source src="/billeder_videoforside/videoforside.mp4" type="video/mp4" />
-     Din browser understøtter ikke videoafspilning.
+    Din browser understøtter ikke videoafspilning.
   </video>
 
   <div id="countdown" class="nedtælling1">48:10:08</div>
@@ -239,35 +239,30 @@ import ArtistCard from "../components/artist_card.astro";
         margin-top: -18%;
         filter: opacity(100%);
       }
+    }
+    /* RULLEANIMATION */
+    /* RULLEANIMATION */
+    .rulletekst-container {
+      width: 100%; /* Sikrer, at containeren bruger hele forældreelementets bredde */
+      overflow: hidden; /* Skjuler den overskydende tekst */
+      white-space: nowrap; /* Forhindrer tekst i at wrappe til næste linje */
+    }
 
-      /* RULLEANIMATION */
+    .rulletekst {
+      display: inline-block; /* Sørg for, at teksten behandles som en inline-blok for at kunne animere dens position */
+      animation: rulle 70s linear infinite; /* Anvender rulleanimationen */
+      font-size: 50px;
+      padding-bottom: 3rem;
+      letter-spacing: 0.5em;
+      color: #0f0;
+    }
 
-      @keyframes rulleAnimation {
-        from {
-          transform: translateX(-100%);
-        }
-        to {
-          transform: translateX(100%);
-        }
+    @keyframes rulle {
+      from {
+        transform: translateX(100%); /* Starter fra højre kant */
       }
-
-      @media (max-width: 600px) {
-        .rulletekst-container {
-          white-space: nowrap;
-          position: relative;
-          width: 100%;
-        }
-
-        .rulletekst {
-          font-family: Helvetica, sans-serif;
-          color: white;
-          font-size: 2.5rem;
-          display: block;
-          white-space: nowrap;
-
-          position: relative;
-          animation: rulleAnimation 20s linear infinite;
-        }
+      to {
+        transform: translateX(-100%); /* Slutter ved venstre kant */
       }
     }
   </style>
