@@ -24,7 +24,7 @@ import ArtistCard from "../components/artist_card.astro";
   </div>
 
   <div class="rulletekst-container">
-    <div class="rulletekst">TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS</div>
+    <div class="rulletekst">TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS</div>
   </div>
 
   <video id="autoplay-video" width="320" height="240" controls>
@@ -250,18 +250,19 @@ import ArtistCard from "../components/artist_card.astro";
 
     .rulletekst {
       display: inline-block; /* Sørg for, at teksten behandles som en inline-blok for at kunne animere dens position */
-      animation: rulle 70s linear infinite; /* Anvender rulleanimationen */
+      animation: rulle 100s linear infinite; /* Anvender rulleanimationen */
       font-size: 50px;
       padding-bottom: 3rem;
       letter-spacing: 0.5em;
       color: #0f0;
+      animation-play-state: running;
     }
 
     @keyframes rulle {
-      from {
+      0 {
         transform: translateX(100%); /* Starter fra højre kant */
       }
-      to {
+      100% {
         transform: translateX(-100%); /* Slutter ved venstre kant */
       }
     }
