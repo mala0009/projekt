@@ -1,7 +1,7 @@
 ---
 import "../styles/style.css";
 import Layout from "../layouts/Layout.astro";
-import Program_ from "../components/program_.astro";
+import ProgramElement from "../components/ProgramElement.astro";
 ---
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,9 +12,9 @@ import Program_ from "../components/program_.astro";
   <h1>LINEUP</h1>
 
   <div class="program">
-    <Program_ spilledag={"thursday"} title={"THURSDAY 22TH AUGUST 2024"} />
-    <Program_ spilledag={"friday"} title={"FRIDAY 23TH AUGUST 2024"} />
-    <Program_ spilledag={"saturday"} title={"SATURDAY 24TH AUGUST 2024"} />
+    <ProgramElement spilledag={"thursday"} title={"THURSDAY 22TH AUGUST 2024"} />
+    <ProgramElement spilledag={"friday"} title={"FRIDAY 23TH AUGUST 2024"} />
+    <ProgramElement spilledag={"saturday"} title={"SATURDAY 24TH AUGUST 2024"} />
   </div>
 </Layout>
 

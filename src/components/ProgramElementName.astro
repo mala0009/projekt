@@ -1,0 +1,7 @@
+---
+const { navn, link, type } = Astro.props;
+---
+
+<a href={`artists/${link}`}>
+  <h4 class={type}>{navn}</h4>
+</a>;
