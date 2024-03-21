@@ -18,9 +18,13 @@ import ArtistCard from "../components/artist_card.astro";
   </div>
 
   <div class="cardwrapper">
-    <ArtistCard img="/billeder_videoforside/peggygou.webp" navn="PEGGY' GOU" text="Kim Min-ji, known as Peggy Gou is a South Korean DJ, singer, song located in berlin, Germany. She has released seven EP’s on record labels including Ninja Tune and Phonica" />
+    <ArtistCard img="/billeder_videoforside/peggygou.webp" navn="PEGGY GOU" text="Kim Min-ji, known as Peggy Gou is a South Korean DJ, singer, song located in berlin, Germany. She has released seven EP’s on record labels including Ninja Tune and Phonica" />
     <ArtistCard img="/billeder_videoforside/minimalene.webp" navn="MINIMALENE" text="Minimalene is a Copenhagen based DJ.Great electronic music cannot be described. It is a feeling. For me, it is spiritualism.”" />
     <ArtistCard img="/billeder_videoforside/peterlutzen.webp" navn="PETER LÜTZEN" text="Peter Lützen is a Copenhagen based guitarist, singer and songwriter. featuring on danish groups panamah and Humørekspressen." />
+  </div>
+
+  <div class="rulletekst-container">
+    <div class="rulletekst">TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS TICKETS</div>
   </div>
 
   <video id="autoplay-video" width="320" height="240" controls>
@@ -234,6 +238,36 @@ import ArtistCard from "../components/artist_card.astro";
         font-size: 15px;
         margin-top: -18%;
         filter: opacity(100%);
+      }
+
+      /* RULLEANIMATION */
+
+      @keyframes rulleAnimation {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(100%);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .rulletekst-container {
+          white-space: nowrap;
+          position: relative;
+          width: 100%;
+        }
+
+        .rulletekst {
+          font-family: Helvetica, sans-serif;
+          color: white;
+          font-size: 2.5rem;
+          display: block;
+          white-space: nowrap;
+
+          position: relative;
+          animation: rulleAnimation 20s linear infinite;
+        }
       }
     }
   </style>
