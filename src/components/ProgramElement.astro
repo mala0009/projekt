@@ -1,0 +1,93 @@
+---
+import ProgramElementName from "../components/ProgramElementName.astro";
+const { dato, hovednavn, mellemnavn, lillenavn, spilledag, title } = Astro.props;
+const data = await fetch(`https://lbqpnyuobrgziblvfawh.supabase.co/rest/v1/karrusel?dato=eq.${spilledag}`, {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxicXBueXVvYnJnemlibHZmYXdoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0ODkyMTAsImV4cCI6MjAyNjA2NTIxMH0.gg9jixgR3HvEJ6hDJP0wxWX9Q-WNJibsw2W0ThsEHVw",
+  },
+}).then((res) => res.json());
+
+console.log(data);
+---
+
+<div><h3>{title}</h3></div>
+<article>
+  <div class="program">
+    <div class="hovednavn">
+      {
+        data.map((onedata) => {
+          return <ProgramElementName navn={onedata.navn} link={onedata.slug} type={"big"} />;
+        })
+      }
+    </div>
+
+    <div class="mellemnavn">
+      {
+        data.map((onedata) => {
+          return <h5>{onedata.mellemnavn}</h5>;
+        })
+      }
+    </div>
+
+    <div class="lillenavn">
+      {
+        data.map((onedata) => {
+          return <h6>{onedata.lillenavn}</h6>;
+        })
+      }
+    </div>
+  </div>
+</article>
+
+<style>
+  .program {
+    color: white;
+    font-family: "Yatra one";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h3 {
+    color: #10ff3d;
+    text-align: center;
+    font-size: small;
+    margin-top: 60px;
+    margin-bottom: 14px;
+  }
+
+  h4 {
+    text-align: center;
+    justify-content: space-around;
+  }
+  .hovednavn {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .mellemnavn {
+    display: flex;
+    gap: 11px;
+    font-size: 1.4rem;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    margin-top: -26px;
+  }
+
+  .lillenavn {
+    display: flex;
+    gap: 11px;
+    font-size: large;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    margin-top: -26px;
+  }
+  h6 {
+    margin-bottom: 72px;
+    margin-top: 23px;
+  }
+</style>
