@@ -25,11 +25,12 @@ import ArtistCard from "../components/artist_card.astro";
 
   <video id="autoplay-video" width="320" height="240" controls>
     <source src="/billeder_videoforside/videoforside.mp4" type="video/mp4" />
-    Din browser understøtter ikke videoafspilning.
+     Din browser understøtter ikke videoafspilning.
   </video>
 
-  <div class="nedtælling1">48:10:08</div>
+  <div id="countdown" class="nedtælling1">48:10:08</div>
   <div class="nedtælling2">UNTIL KARRUSEL</div>
+
   <div class="grafik1"><img src="../img/gobbel.svg" alt="" /></div>
 
   <style>
@@ -72,6 +73,7 @@ import ArtistCard from "../components/artist_card.astro";
       align-items: center; /* Centrerer teksten vertikalt */
       margin-bottom: 30px;
       margin-top: 50px;
+      font-family: Helvetica;
     }
 
     .knaphøjre {
@@ -80,6 +82,7 @@ import ArtistCard from "../components/artist_card.astro";
       text-decoration: underline;
       order: 2;
       margin-bottom: 50px;
+      font-family: Helvetica;
     }
 
     .nedtælling1 {
@@ -126,15 +129,20 @@ import ArtistCard from "../components/artist_card.astro";
       .nedtælling1 {
         color: white;
         text-align: center;
-        font-size: 50px;
+        font-size: 65px;
         font-weight: 700;
-        padding-top: 4rem;
+        padding-top: 10rem;
+        font-family: Helvetica;
       }
 
       .nedtælling2 {
         color: white;
         text-align: center;
+        font-family: Helvetica;
+        font-size: 30px;
+        text-decoration: dotted;
       }
+
       #autoplay-video {
         width: 100%;
         height: 100vh;
