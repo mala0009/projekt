@@ -1,4 +1,5 @@
 ---
+import ProgramElementName from "../components/ProgramElementName.astro";
 const { dato, hovednavn, mellemnavn, lillenavn, spilledag, title } = Astro.props;
 const data = await fetch(`https://lbqpnyuobrgziblvfawh.supabase.co/rest/v1/karrusel?dato=eq.${spilledag}`, {
   method: "GET",
@@ -8,19 +9,15 @@ const data = await fetch(`https://lbqpnyuobrgziblvfawh.supabase.co/rest/v1/karru
 }).then((res) => res.json());
 
 console.log(data);
-
-data.forEach((datae) => {
-  console.log(datae.hovednavn);
-});
 ---
 
+<div><h3>{title}</h3></div>
 <article>
   <div class="program">
-    <div><h3>{title}</h3></div>
     <div class="hovednavn">
       {
         data.map((onedata) => {
-          return <h4>{onedata.hovednavn}</h4>;
+          return <ProgramElementName navn={onedata.navn} link={onedata.slug} type={"big"} />;
         })
       }
     </div>
@@ -52,7 +49,7 @@ data.forEach((datae) => {
     align-items: center;
   }
 
-  .program h3 {
+  h3 {
     color: #10ff3d;
     text-align: center;
     font-size: small;

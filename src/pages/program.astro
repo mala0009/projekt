@@ -1,7 +1,7 @@
 ---
 import "../styles/style.css";
 import Layout from "../layouts/Layout.astro";
-import Program_ from "../components/program_.astro";
+import ProgramElement from "../components/ProgramElement.astro";
 ---
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,8 +12,60 @@ import Program_ from "../components/program_.astro";
   <h1>LINEUP</h1>
 
   <div class="program">
-    <Program_ spilledag={"thursday"} title={"THURSDAY 22TH AUGUST 2024"} />
-    <Program_ spilledag={"friday"} title={"FRIDAY 23TH AUGUST 2024"} />
-    <Program_ spilledag={"saturday"} title={"SATURDAY 24TH AUGUST 2024"} />
+    <ProgramElement spilledag={"thursday"} title={"THURSDAY 22TH AUGUST 2024"} />
+    <ProgramElement spilledag={"friday"} title={"FRIDAY 23TH AUGUST 2024"} />
+    <ProgramElement spilledag={"saturday"} title={"SATURDAY 24TH AUGUST 2024"} />
   </div>
 </Layout>
+
+<style>
+  .program {
+    color: white;
+    font-family: "Yatra one";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .program h3 {
+    color: #10ff3d;
+    text-align: center;
+    font-size: small;
+    margin-top: 60px;
+    margin-bottom: 14px;
+  }
+
+  h4 {
+    text-align: center;
+    justify-content: space-around;
+  }
+  .hovednavn {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .mellemnavn {
+    display: flex;
+    gap: 11px;
+    font-size: 1.4rem;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    margin-top: -26px;
+  }
+
+  .lillenavn {
+    display: flex;
+    gap: 11px;
+    font-size: large;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    margin-top: -26px;
+  }
+  h6 {
+    margin-bottom: 72px;
+    margin-top: 23px;
+  }
+</style>
