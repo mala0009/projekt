@@ -5,24 +5,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 <footer>
   <div class="footer-container">
-    <div class="left-section">
+    <div class="left">
       <div class="newsletter">
-        <div class="newsletter">Newsletter</div>
-        <div>Sign up to the newsletter and be the first to know about music announcement, events and much more.</div>
-        <div class="mobileshow">
-          <div class="kontakt_info">
-            <div>Contact: info@nusnus.dk</div>
-            <div>Karrusel, Copenhagen, Refshaleøen</div>
-          </div>
-        </div>
+        <div class="newsletter_overskrift">Newsletter</div>
+        <div class="newsletter_text">Sign up to the newsletter and be the first to know about music announcement, events and much more.</div>
         <form action="join">
           <button type="submit">JOIN</button>
         </form>
       </div>
     </div>
 
-    <div class="right-section">
-      <div class="kontakt_info mobilehide">
+    <div class="right">
+      <div class="kontakt_info">
         <div>Contact: info@nusnus.dk</div>
         <div>Karrusel, Copenhagen, Refshaleøen</div>
       </div>
@@ -34,7 +28,6 @@
     </div>
   </div>
 </footer>
-
 <style>
   footer {
     color: #fff;
@@ -42,22 +35,30 @@
     font-family: Arial, Helvetica, sans-serif;
   }
 
+  .kontakt_info {
+    display: none;
+  }
   .footer-container {
     display: flex;
+    flex-direction: row; /* Gør at børnene (venstre og højre sektion) står under hinanden */
     justify-content: space-between;
-    align-items: baseline;
   }
 
-  .newsletter,
-  .kontakt_info,
-  .social-icons {
-    flex-basis: 100%; /* Placer dem under hinanden */
+  .newsletter_text {
+    max-width: 300px;
+    text-align: left;
+  }
+
+  .newsletter_overskrift {
+    max-width: 300px;
+    text-align: left;
+    font-weight: bolder;
   }
 
   .kontakt_info {
     text-align: left;
     padding-top: 2rem;
-    font-size: 15px;
+    font-size: 10px;
   }
 
   .social-icons {
@@ -66,17 +67,6 @@
     justify-content: flex-end; /* Justerer børnelementerne (ikonerne) til højre */
     align-items: center;
     margin-top: 20px;
-  }
-  .social-icons form {
-    display: flex;
-    justify-content: space-between;
-    flex: 1;
-  }
-
-  .newsletter h2,
-  .kontakt_info h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
   }
 
   .newsletter div,
@@ -92,12 +82,9 @@
     background-color: transparent; /* Gennemsigtig baggrundsfarve */
     color: #0f0; /* Grøn tekstfarve */
     border: 2px solid #0f0; /* Grøn streg */
-    padding: 8px 16px;
+    padding: 7px 30%;
     border-radius: 4px;
     cursor: pointer;
-  }
-  .social-icons button {
-    justify-content: space-between;
   }
 
   .social-icons a {
@@ -106,28 +93,20 @@
     color: #0f0;
   }
 
-  .social-icons a:hover {
-    text-decoration: underline;
+  .social-icons {
+    margin-top: auto; /* Placerer logoerne nederst på siden */
   }
 
-  .mobileshow {
-    display: none;
+  .newsletter_overskrift {
+    font-weight: bold;
+    text-align: left;
+    width: 100%; /* Sikrer, at stilen gælder på hele linjens bredde */
   }
 
-  .mobilehide {
-    display: block;
+  .social-icons i {
+    font-size: 24px; /* Ændrer størrelsen på de sociale medier ikoner */
   }
+
   @media screen and (max-width: 767px) {
-    .mobileshow {
-      display: block;
-    }
-
-    .mobilehide {
-      display: none;
-    }
-    .right-section {
-      display: grid;
-      align-content: end;
-    }
   }
 </style>

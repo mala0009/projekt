@@ -21,11 +21,24 @@ const img = Astro.props.img;
   .card {
     display: grid;
     text-align: center;
+    padding-bottom: 4rem;
+    padding: 3rem;
+    padding-top: 0;
   }
 
   .card img {
     width: 100%;
     object-fit: cover;
     align-self: stretch;
+  }
+
+  .card p {
+    text-align: left;
+    margin-top: 0;
+  }
+
+  .card h3 {
+    text-align: left;
+    padding-top: 1rem;
   }
 </style>
