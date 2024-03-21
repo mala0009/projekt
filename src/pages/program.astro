@@ -1,32 +1,19 @@
 ---
 import "../styles/style.css";
 import Layout from "../layouts/Layout.astro";
-import Program from "../components/program.astro";
+import Program_ from "../components/program_.astro";
 ---
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+1p:wght@100&family=Open+Sans&family=Oranienbaum&family=Oregano&family=PT+Sans+Narrow&family=Rajdhani&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100&family=Yatra+One&display=swap" rel="stylesheet" />
 
 <Layout>
   <h1>LINEUP</h1>
-  <div class="grafik2">
-    <img src="../img/swirl.svg" alt="" />
-  </div>
-  <div class="grafik3">
-    <img src="../img/swirl.svg" alt="" />
+
+  <div class="program">
+    <Program_ spilledag={"thursday"} title={"THURSDAY 22TH AUGUST 2024"} />
+    <Program_ spilledag={"friday"} title={"FRIDAY 23TH AUGUST 2024"} />
+    <Program_ spilledag={"saturday"} title={"SATURDAY 24TH AUGUST 2024"} />
   </div>
 </Layout>
-
-<style>
-  h3 {
-    text-align: center;
-  }
-
-  .grafik2 {
-    opacity: 20%;
-    width: 100%;
-  }
-
-  .grafik3 {
-    opacity: 20%;
-    width: 100%;
-    transform: rotate(180deg);
-  }
-</style>
